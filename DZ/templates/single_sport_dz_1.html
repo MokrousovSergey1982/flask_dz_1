@@ -1,0 +1,23 @@
+{% extends 'base_dz_1.html' %}
+
+{% block title %}
+    Магазин спортивных товаров DZ_1
+    Одиночные виды спорта
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <td>{{ season }} </td>
+            <td>{{ type }}</td>
+            <td>{{ name }}</td>
+        </tr>
+{% for single_sport in single_sport_list %}
+        </tr>
+            <td>{{ single_sport.season }} </td>
+            <td>{{ single_sport.type }}</td>
+            <td>{{ single_sport.name }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
